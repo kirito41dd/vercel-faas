@@ -1,5 +1,4 @@
 {
-  "comment": "https://vercel.com/docs/configuration",
   "trailingSlash": false,
   "rewrites":
   [
