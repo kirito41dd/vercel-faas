@@ -15,7 +15,9 @@ var (
 )
 
 func registerRouter(r *gin.RouterGroup) {
-	r.GET("/ping", handler.Ping)
+	r.GET("/api/ping", handler.Ping)
+	// for nostr NIP-05
+	r.GET("/.well-known/nostr.json", handler.Cors, handler.NIP05)
 }
 
 // init gin app
@@ -31,8 +33,8 @@ func init() {
 		}
 		c.String(http.StatusBadRequest, sb.String())
 	})
-	// must /api/xxx
-	r := app.Group("/api")
+
+	r := app.Group("/")
 
 	// register route
 	registerRouter(r)
