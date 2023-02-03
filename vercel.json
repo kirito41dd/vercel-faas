@@ -7,7 +7,7 @@
       "destination": "/api/entrypoint.go"
     },
     {
-      "source": "/.well-known/nostr.json",
+      "source": "/(.*)",
       "destination": "/api/entrypoint.go"
     }
   ]
