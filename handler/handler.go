@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -19,6 +20,7 @@ func NIP05(c *gin.Context) {
 		"kirito": "2f7caa968b0ec9bacd55a07cfaf6206aab5a62387c76303c311db949dec8bc57",
 	}
 	user := c.Query("name")
+	fmt.Println("nip05 verify request", user)
 	if v, ok := name2pubkey[user]; ok {
 		resp := NIP05Resp{}
 		resp.Names[user] = v
