@@ -18,6 +18,7 @@ func ErrRouter(c *gin.Context) {
 func NIP05(c *gin.Context) {
 	name2pubkey := map[string]string{
 		"kirito": "2f7caa968b0ec9bacd55a07cfaf6206aab5a62387c76303c311db949dec8bc57",
+		"shishi": "ff99c98713102b462581f31caf810bd59342a13c308cd0e4fb48695e3fc7fc75",
 	}
 	user := c.Query("name")
 	fmt.Println("nip05 verify request", user, name2pubkey[user])
