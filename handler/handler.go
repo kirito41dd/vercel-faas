@@ -25,6 +25,7 @@ func NIP05(c *gin.Context) {
 		resp := NIP05Resp{Names: map[string]string{}}
 		resp.Names[user] = v
 		c.JSON(http.StatusOK, resp)
+		return
 	}
 	c.Status(http.StatusNotFound)
 	return
