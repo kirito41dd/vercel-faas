@@ -22,7 +22,7 @@ func NIP05(c *gin.Context) {
 	user := c.Query("name")
 	fmt.Println("nip05 verify request", user)
 	if v, ok := name2pubkey[user]; ok {
-		resp := NIP05Resp{}
+		resp := NIP05Resp{Names: map[string]string{}}
 		resp.Names[user] = v
 		c.JSON(http.StatusOK, resp)
 	}
