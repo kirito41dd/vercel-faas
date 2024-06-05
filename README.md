@@ -1,7 +1,7 @@
 # vercel-faas
 A set of serverless apis written in go(gin) and deployed in [vercel](https://vercel.com) 
 
-all apis: [https://faas.kirito41dd.cn/api/1](https://faas.kirito41dd.cn/api/1)
+all apis: [https://vercel-faas-one.vercel.app/api/1](https://vercel-faas-one.vercel.app/api/1)
 
 ## local run
 ```bash
